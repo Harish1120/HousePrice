@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import joblib
 import seaborn as sns
 import matplotlib.pyplot as plt
 import warnings
@@ -79,3 +80,5 @@ predictions = model.predict(X_endog_test)
 plt.figure(figsize=(10,10))
 sns.scatterplot(y_train['price'], predictions)
 plt.show()
+
+joblib.dump(lm,'houseprice_63.pkl')
